@@ -1,4 +1,4 @@
-Aula 2 - Exercicio 2
+# Aula 2 - Exercicio 3
 
 Fazer um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e mostre: <br>
 
