@@ -18,7 +18,11 @@ A primeira linha da entrada contém apenas um inteiro N, indicando o número de 
 
 Seu programa deve escrever na saída a fita totalmente colorida, de acordo com a regra definida acima.
 
+<br>
+
 ![Example img](https://cdn.discordapp.com/attachments/1224065809576366200/1224825235396628498/Captura_de_tela_2024-04-02_110631.png?ex=661ee664&is=660c7164&hm=aea90e02d726aaf9449783dfca39d947b58a2edc4a58574f202b84deaab6a2b7&)
+
+<br>
 
 ```go
 ```
