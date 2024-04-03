@@ -7,8 +7,25 @@ package main
 import "fmt"
 
 func main() {
-    var q int
+    var n, maior_n int
     fmt.Println("Escreva uma sequência de números inteiros positivos. Digite 0 para parar dar fim a sequência.")
-    fmt.Scan(&q)
+    
+    pablo(n, maior_n)
+    
+}
+
+func pablo(n, maior_n int){
+        for {
+            fmt.Print("Digite um numero: ")
+            fmt.Scan(&q)
+            
+            if n == 0{
+                break
+            }
+        
+            if n > maior_n{
+                maior_n = n
+            }
+        }
 }
 ```
