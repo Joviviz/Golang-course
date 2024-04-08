@@ -73,4 +73,44 @@ func main() {
 }
 
 ```
+# Q13
+```go
+package main
 
+import "fmt"
+
+func conferirQuadradoPerfeito(x int) {
+	if x == 1 {
+		println("É um quadrado perfeito")
+	} else {
+		var y int
+		var conf int
+
+		for y = 2; y <= x/2; y++ {
+			if y*y == x {
+				//println("É um quadrado perfeito")
+				conf = 1
+				break
+			} else {
+				//println("Não é um quadrado perfeito")
+				continue
+			}
+		}
+		if conf == 0 {
+			println("Não é um quadrado perfeito")
+		} else {
+			println("É um quadrado perfeito")
+		}
+
+	}
+}
+
+func main() {
+	var x int
+
+	fmt.Println("Escreva um número inteiro: ")
+	fmt.Scan(&x)
+
+	conferirQuadradoPerfeito(x)
+}
+```
