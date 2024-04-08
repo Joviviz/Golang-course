@@ -54,3 +54,23 @@ func main() {
 	conferirTriangulo(a, b, c)
 }
 ```
+
+# Q12
+```go
+package main
+
+import "fmt"
+
+func mdc(n1, n2 int) int {
+	if n2 == 0 {
+		return n1
+	}
+	return mdc(n2, n1%n2)
+}
+
+func main() {
+	fmt.Println(mdc(60, 40))
+}
+
+```
+
