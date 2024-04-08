@@ -114,3 +114,52 @@ func main() {
 	conferirQuadradoPerfeito(x)
 }
 ```
+
+# Q15
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var numero1 int
+	fmt.Scan(&numero1)
+	for i := numero1; i > 0; i-- {
+		fmt.Println(i)
+	}
+}
+
+
+```
+# Q16
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var numero1 int
+	var numero2 int
+	fmt.Scan(&numero1)
+	fmt.Scan(&numero2)
+	var x1 int = 0
+	var x2 int = 0
+	for i := 1; i <= numero1; i++ {
+		if numero1%i == 0 {
+			x1 += i
+		}
+	}
+	for i := 1; i <= numero2; i++ {
+		if numero2%i == 0 {
+			x2 += i
+		}
+	}
+	fmt.Println("soma dos divisores do primeiro número:", x1, "\nsoma dos divisores do segundo número:", x2)
+	if numero1 == x2 || numero2 == x1 {
+		fmt.Println("Os números são amigos")
+	} else {
+		fmt.Println("Os números não são amigos")
+	}
+}
+```
+
