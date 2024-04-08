@@ -24,6 +24,38 @@ func main() {
 	println("O número que não se repete na lista é: ", encontrarNumero(numeros))
 }
 ```
+# Q7
+```go
+package main
+
+import "fmt"
+import "math"
+
+func main() {
+
+	var x float64 = math.Cbrt(27)
+	fmt.Println(x)
+}
+
+```
+# Q9
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var numero1 int
+	fmt.Scan(&numero1)
+	if numero1%4 == 0 && numero1%10 != 0 {
+		fmt.Println("é bissexto")
+	} else {
+		fmt.Println("não é bissexto")
+	}
+}
+
+
+```
 
 # Q11
 ```go
