@@ -1,6 +1,6 @@
 # Questões Facil
 
-Q1
+# Q1
 ```go
 package main
 
@@ -17,7 +17,7 @@ func main() {
 
 
 
-Q2
+# Q2
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
 
 
 
-Q3
+# Q3
 ```go
 package main
 
@@ -73,7 +73,7 @@ func even_odd_switch(n int) {
 }
 
 ```
-Q4
+# Q4
 ```go
 package main
 
@@ -90,7 +90,7 @@ func main() {
 }
 
 ```
-Q5
+# Q5
 ```go
 package main
 
@@ -115,7 +115,7 @@ func main() {
 
 }
 ```
-Q6
+# Q6
 ```go
 package main
 
@@ -129,11 +129,11 @@ func main() {
 
 
 ```
-Q7
+# Q7
 ```go
 
 ```
-Q8
+# Q8
 ```go
 package main
 
@@ -147,7 +147,7 @@ func main() {
 
 
 ```
-Q9
+# Q9
 ```go
 package main
 
@@ -181,7 +181,7 @@ func main() {
 
 }
 ```
-Q10
+# Q10
 ```go
 package main
 
@@ -197,7 +197,7 @@ func main() {
 
 
 ```
-Q11
+# Q11
 ```go
 package main
 
@@ -221,7 +221,7 @@ func main() {
 
 
 ```
-Q12
+# Q12
 ```go
 package main
 
@@ -249,7 +249,7 @@ func main() {
 	fmt.Println("A média ponderada é:", (numero1*peso1+numero2*peso2+numero3*peso3)/3)
 }
 ```
-Q13
+# Q13
 ```go
 package main
 
@@ -269,7 +269,7 @@ func main() {
 }
 
 ```
-Q14
+# Q14
 ```go
 package main
 
@@ -289,7 +289,7 @@ func main() {
 }
 
 ```
-Q15
+# Q15
 ```go
 package main
 
@@ -314,11 +314,11 @@ func main() {
 
 
 ```
-Q16
+# Q16
 ```go
 
 ```
-Q17
+# Q17
 ```go
 
 package main
@@ -352,11 +352,11 @@ func conferirPrimo(n int) bool {
 }
 
 ```
-Q18
+# Q18
 ```go
 
 ```
-Q19
+# Q19
 ```go
 package main
 
@@ -371,7 +371,7 @@ func main() {
 
 
 ```
-Q20
+# Q20
 ```go
 
 ```
