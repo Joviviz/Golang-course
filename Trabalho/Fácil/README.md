@@ -373,5 +373,20 @@ func main() {
 ```
 # Q20
 ```go
+package main
+
+import "fmt"
+
+func main() {
+	var numero1 int
+	fmt.Scan(&numero1)
+	if numero1%4 == 0 && numero1%10 != 0 {
+		fmt.Println("é bissexto")
+	} else {
+		fmt.Println("não é bissexto")
+	}
+}
+
 
 ```
+
