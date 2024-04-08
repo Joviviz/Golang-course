@@ -24,3 +24,33 @@ func main() {
 	println("O número que não se repete na lista é: ", encontrarNumero(numeros))
 }
 ```
+
+# Q11
+```go
+package main
+
+import "fmt"
+
+func conferirTriangulo(a, b, c float64) {
+	if a < b+c && b < a+c && c < b+a {
+		println("É possível fazer um triângulo")
+	} else {
+		println("Não é possível fazer um triângulo")
+	}
+
+}
+
+func main() {
+	var a, b, c float64
+	fmt.Println("Escreva um valor para os lados do triângulo: \n")
+
+	fmt.Println("\nLado A: ")
+	fmt.Scan(&a)
+	fmt.Println("\nLado B: ")
+	fmt.Scan(&b)
+	fmt.Println("\nLado C ")
+	fmt.Scan(&c)
+
+	conferirTriangulo(a, b, c)
+}
+```
