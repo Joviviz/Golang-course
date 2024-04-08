@@ -1,4 +1,4 @@
-# Quesões Médias
+# Questões Médias
 
 # Q1
 ```go
