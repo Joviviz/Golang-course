@@ -74,7 +74,7 @@ func colorirFita(tamanho int,fita []int){
 		if fita[i] == -1 {
 			tomDeCor = i - tom0
 			
-			abs(tomDeCor)
+			tomDeCor = abs(tomDeCor)
 			fmt.Print(tomDeCor)
 		}
 	}
