@@ -1,4 +1,4 @@
-# Aula 2 - Exercicio Bonus - Fita Colorida
+# Aula 2 - Exercicio Bonus - Fita Colorida WORK IN PROGRESS
 
 Roberto tem um conjunto de lápis com 10 tons diferentes de uma mesma cor, numerados de 0 a 9. Numa fita quadriculada, alguns quadrados foram coloridos inicialmente com o tom 0.
 
@@ -25,4 +25,66 @@ Seu programa deve escrever na saída a fita totalmente colorida, de acordo com a
 <br>
 
 ```go
+package main
+import "fmt"
+
+func definirFita(tamanho int) []int {
+
+	fita := make([]int, tamanho)
+
+	for i:= 0; i < tamanho; i++ {
+		for {
+			fmt.Print("\nRegistre uma tipagem de cor na posicao ", i+1)
+			fmt.Print("\nNão colorido (-1) ou colorido com Tom 0 (0): \n")
+			fmt.Scan(&fita[i])
+
+			if fita[i] == -1 || fita[i] == 0 {
+				break
+			} else {
+				fmt.Print("Valor invalido, tente novamente\n")
+			}
+		}
+	}
+	fmt.Print(fita)
+	return fita
+}
+
+func abs(tomDeCor int) int{
+	if tomDeCor < 0{
+		tomDeCor = tomDeCor* (-1)
+	}
+	return tomDeCor
+}
+
+func colorirFita(tamanho int,fita []int){
+	//fitaColorida := make([]int, tamanho)
+	var tomDeCor int
+	var tom0 int
+
+	for i, cor := range fita{
+		if cor == 0 {
+			tom0 = i
+		}
+	}
+
+	for i := 0; i < tamanho; i++{
+		if fita[i] == -1 {
+			tomDeCor = i - tom0
+			
+			abs(tomDeCor)
+			fmt.Print(tomDeCor)
+		}
+	}
+
+	
+}
+
+func main() {
+    var tamanho int
+    fmt.Println("Tamanho da fita : ")
+    fmt.Scan(&tamanho)
+
+	fita := definirFita(tamanho)
+	colorirFita(tamanho, fita)
+}
 ```
