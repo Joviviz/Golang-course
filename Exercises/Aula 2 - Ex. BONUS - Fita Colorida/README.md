@@ -1,4 +1,7 @@
-# Aula 2 - Exercicio Bonus - Fita Colorida WORK IN PROGRESS
+# Aula 2 - Exercicio Bonus - Fita Colorida 
+
+> [!WARNING] 
+> WORK IN PROGRESS
 
 Roberto tem um conjunto de lápis com 10 tons diferentes de uma mesma cor, numerados de 0 a 9. Numa fita quadriculada, alguns quadrados foram coloridos inicialmente com o tom 0.
 
