@@ -29,13 +29,14 @@ Seu programa deve escrever na saída a fita totalmente colorida, de acordo com a
 
 ```go
 package main
+
 import "fmt"
 
 func definirFita(tamanho int) []int {
 
 	fita := make([]int, tamanho)
 
-	for i:= 0; i < tamanho; i++ {
+	for i := 0; i < tamanho; i++ {
 		for {
 			fmt.Print("\nRegistre uma tipagem de cor na posicao ", i+1)
 			fmt.Print("\nNão colorido (-1) ou colorido com Tom 0 (0): \n")
@@ -52,42 +53,49 @@ func definirFita(tamanho int) []int {
 	return fita
 }
 
-func abs(tomDeCor int) int{
-	if tomDeCor < 0{
-		tomDeCor = tomDeCor* (-1)
+func abs(tomDeCor int) int {
+	if tomDeCor < 0 {
+		tomDeCor = tomDeCor * (-1)
 	}
 	return tomDeCor
 }
 
-func colorirFita(tamanho int,fita []int){
+func colorirFita(tamanho int, fita []int) {
 	//fitaColorida := make([]int, tamanho)
 	var tomDeCor int
 	var tom0 int
 
-	for i, cor := range fita{
+	/*for i, cor := range fita {
 		if cor == 0 {
 			tom0 = i
 		}
 	}
 
-	for i := 0; i < tamanho; i++{
+	for i := 0; i < tamanho; i++ {
 		if fita[i] == -1 {
 			tomDeCor = i - tom0
-			
 			tomDeCor = abs(tomDeCor)
-			fmt.Print(tomDeCor)
+			fmt.Printf("%d", tomDeCor)
+		} else {
+			tomDeCor = 0
+			fmt.Printf("%d", tomDeCor)
+		}
+	}*/
+
+	for i := 0; i < tamanho; i++ {
+		for j := 0; j < tamanho; j++ {
+			
 		}
 	}
-
-	
 }
 
 func main() {
-    var tamanho int
-    fmt.Println("Tamanho da fita : ")
-    fmt.Scan(&tamanho)
+	var tamanho int
+	fmt.Println("Tamanho da fita : ")
+	fmt.Scan(&tamanho)
 
 	fita := definirFita(tamanho)
 	colorirFita(tamanho, fita)
 }
+
 ```
