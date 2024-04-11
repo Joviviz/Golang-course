@@ -3,6 +3,23 @@
 1 - Crie um Array de inteiros com 5 elementos e imprima cada elemento em uma linha
 separada. <br>
 ```go
+package main
+
+import "fmt"
+
+func printArray(inteiros []int) {
+	for i := 0; i < 5; i++ {
+		fmt.Printf("Linha %d = %d \n", i+1, inteiros[i])
+	}
+}
+
+func main() {
+	var inteiros = [5]int{5, 4, 3, 2, 1}
+
+	fmt.Printf("O Array é %d \n", inteiros)
+	printArray(inteiros[:])
+
+}
 ```
 
 
