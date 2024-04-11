@@ -100,7 +100,7 @@ func main(){
 	var nums []float64
 	nums = definirArray(nums)
 
-	println("Sua lista : ")
+	fmt.Println("Sua lista : ")
 	fmt.Println(nums)
 
 	media := calcularMedia(nums)
