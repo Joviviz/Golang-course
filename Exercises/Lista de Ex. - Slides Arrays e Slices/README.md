@@ -70,6 +70,43 @@ func main() {
 
 4 - Crie um Array de floats com 6 elementos e calcule a média dos valores armazenados no Array. <br>
 ```go
+package main
+import "fmt"
+
+func definirArray(nums []float64) []float64{
+	var valor float64
+
+	for i := 0; i < 6; i++ {
+		fmt.Printf("Adicione um valor na posicao %d: ", i+1)
+		fmt.Scan(&valor)
+
+		nums = append(nums, valor)
+	}
+	return nums
+}
+
+func calcularMedia(nums []float64) float64{
+	somatorio := 0.0
+
+	for i := 0; i < len(nums); i++ {
+		somatorio += nums[i]
+	}
+
+	media := somatorio / float64(len(nums))
+	return media
+}
+
+func main(){
+	var nums []float64
+	nums = definirArray(nums)
+
+	println("Sua lista : ")
+	fmt.Println(nums)
+
+	media := calcularMedia(nums)
+	fmt.Printf("A média é : %.2f", media)
+
+}
 ```
 
 5 - Crie uma matriz bidimensional de inteiros com 3 linhas e 4 colunas. Inicialize cada elemento com o valor da soma do índice da linha e o índice da coluna. Imprima a matriz resultante. <br>
