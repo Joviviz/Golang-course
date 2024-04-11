@@ -48,6 +48,24 @@ func main() {
 
 3 - Crie um Slice de inteiros com os valores 1, 2, 3, 4 e 5. Remova o terceiro elemento e imprima o Slice resultante. <br>
 ```go
+package main
+
+import "fmt"
+
+func removerTerceiro(nums []int) []int {
+	fmt.Println("Removendo o terceiro . . .")
+	nums = append(nums[:2], nums[3:]...)
+
+	return nums
+}
+
+func main() {
+	var nums = []int{1, 2, 3, 4, 5}
+	fmt.Printf("Slice = %d \n", nums)
+
+	nums = removerTerceiro(nums)
+	fmt.Printf("Slice = %d \n", nums)
+}
 ```
 
 4 - Crie um Array de floats com 6 elementos e calcule a média dos valores armazenados no Array. <br>
