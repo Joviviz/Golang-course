@@ -99,3 +99,66 @@ func main() {
 }
 
 ```
+```go
+package main
+import "fmt"
+
+func definirFita(tamanho int) []int {
+
+	fita := make([]int, tamanho)
+
+	for i:= 0; i < tamanho; i++ {
+		for {
+			fmt.Println("\nRegistre uma tipagem de cor na posicao ", i+1)
+			fmt.Println("Não colorido (-1) ou colorido com Tom 0 (0): ")
+			fmt.Scan(&fita[i])
+
+			if fita[i] == -1 || fita[i] == 0 {
+				break
+			} else {
+				fmt.Print("Valor invalido, tente novamente\n")
+			}
+		}
+	}
+	fmt.Print(fita)
+	return fita
+}
+
+func abs(tomDeCor int) int{
+	if tomDeCor < 0{
+		tomDeCor = tomDeCor* (-1)
+	}
+	return tomDeCor
+}
+
+func colorirFita(tamanho int,fita []int){
+	fitaColorida := make([]int, tamanho)
+	
+
+	for i := 0; i < tamanho; i++ {
+		if fita[i] == -1{
+			distancia_0 := tamanho
+			for j := 0; j < tamanho; j++ {
+				if fita[j] == 0 && abs(j - i) < distancia_0{
+					distancia_0 = abs(j - i)
+				}
+			}
+			fitaColorida[i] = min(distancia_0, 9)
+		}
+
+	}
+
+	print(fitaColorida)
+
+
+}
+
+func main() {
+    var tamanho int
+    fmt.Println("Tamanho da fita : ")
+    fmt.Scan(&tamanho)
+
+	fita := definirFita(tamanho)
+	colorirFita(tamanho, fita)
+}
+```
