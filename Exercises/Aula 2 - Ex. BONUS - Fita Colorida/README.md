@@ -1,7 +1,5 @@
 # Aula 2 - Exercicio Bonus - Fita Colorida 
 
-> [!WARNING] 
-> WORK IN PROGRESS
 
 Roberto tem um conjunto de lápis com 10 tons diferentes de uma mesma cor, numerados de 0 a 9. Numa fita quadriculada, alguns quadrados foram coloridos inicialmente com o tom 0.
 
@@ -38,77 +36,6 @@ func definirFita(tamanho int) []int {
 
 	for i := 0; i < tamanho; i++ {
 		for {
-			fmt.Print("\nRegistre uma tipagem de cor na posicao ", i+1)
-			fmt.Print("\nNão colorido (-1) ou colorido com Tom 0 (0): \n")
-			fmt.Scan(&fita[i])
-
-			if fita[i] == -1 || fita[i] == 0 {
-				break
-			} else {
-				fmt.Print("Valor invalido, tente novamente\n")
-			}
-		}
-	}
-	fmt.Print(fita)
-	return fita
-}
-
-func abs(tomDeCor int) int {
-	if tomDeCor < 0 {
-		tomDeCor = tomDeCor * (-1)
-	}
-	return tomDeCor
-}
-
-func colorirFita(tamanho int, fita []int) {
-	//fitaColorida := make([]int, tamanho)
-	var tomDeCor int
-	var tom0 int
-
-	/*for i, cor := range fita {
-		if cor == 0 {
-			tom0 = i
-		}
-	}
-
-	for i := 0; i < tamanho; i++ {
-		if fita[i] == -1 {
-			tomDeCor = i - tom0
-			tomDeCor = abs(tomDeCor)
-			fmt.Printf("%d", tomDeCor)
-		} else {
-			tomDeCor = 0
-			fmt.Printf("%d", tomDeCor)
-		}
-	}*/
-
-	for i := 0; i < tamanho; i++ {
-		for j := 0; j < tamanho; j++ {
-			
-		}
-	}
-}
-
-func main() {
-	var tamanho int
-	fmt.Println("Tamanho da fita : ")
-	fmt.Scan(&tamanho)
-
-	fita := definirFita(tamanho)
-	colorirFita(tamanho, fita)
-}
-
-```
-```go
-package main
-import "fmt"
-
-func definirFita(tamanho int) []int {
-
-	fita := make([]int, tamanho)
-
-	for i:= 0; i < tamanho; i++ {
-		for {
 			fmt.Println("\nRegistre uma tipagem de cor na posicao ", i+1)
 			fmt.Println("Não colorido (-1) ou colorido com Tom 0 (0): ")
 			fmt.Scan(&fita[i])
@@ -120,45 +47,47 @@ func definirFita(tamanho int) []int {
 			}
 		}
 	}
-	fmt.Print(fita)
+	fmt.Printf("%d \n", fita)
 	return fita
 }
 
-func abs(tomDeCor int) int{
-	if tomDeCor < 0{
-		tomDeCor = tomDeCor* (-1)
+func abs(tomDeCor int) int {
+	if tomDeCor < 0 {
+		return -tomDeCor
 	}
 	return tomDeCor
 }
 
-func colorirFita(tamanho int,fita []int){
+func colorirFita(tamanho int, fita []int) {
 	fitaColorida := make([]int, tamanho)
-	
 
 	for i := 0; i < tamanho; i++ {
-		if fita[i] == -1{
+		if fita[i] == -1 {
 			distancia_0 := tamanho
+
 			for j := 0; j < tamanho; j++ {
-				if fita[j] == 0 && abs(j - i) < distancia_0{
-					distancia_0 = abs(j - i)
+
+				if fita[j] == 0 && abs(i-j) < distancia_0 {
+					distancia_0 = abs(i - j)
 				}
 			}
 			fitaColorida[i] = min(distancia_0, 9)
 		}
-
 	}
 
-	print(fitaColorida)
-
+	for _, cor := range fitaColorida {
+		fmt.Printf("%d ", cor)
+	}
 
 }
 
 func main() {
-    var tamanho int
-    fmt.Println("Tamanho da fita : ")
-    fmt.Scan(&tamanho)
+	var tamanho int
+	fmt.Println("Tamanho da fita : ")
+	fmt.Scan(&tamanho)
 
 	fita := definirFita(tamanho)
 	colorirFita(tamanho, fita)
 }
+
 ```
