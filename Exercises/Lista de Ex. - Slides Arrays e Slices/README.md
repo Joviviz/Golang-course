@@ -111,4 +111,25 @@ func main(){
 
 5 - Crie uma matriz bidimensional de inteiros com 3 linhas e 4 colunas. Inicialize cada elemento com o valor da soma do índice da linha e o índice da coluna. Imprima a matriz resultante. <br>
 ```go
+package main
+import "fmt"
+
+func determinarMatriz(matriz [3][4]int) [3][4]int{
+	for linha := range matriz{
+		for coluna := range matriz[linha]{
+			matriz[linha][coluna] = linha + coluna
+			fmt.Println("Elemento[", linha, "][", coluna, "] = ", matriz[linha][coluna])
+		}
+	}
+
+	return matriz
+}
+
+func main(){
+	matriz := [3][4]int {{},{},{}}
+	matriz = determinarMatriz(matriz)
+
+	fmt.Println("\nSua matriz : ")
+	fmt.Println(matriz)
+}
 ```
